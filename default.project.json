@@ -1,7 +1,6 @@
 {
   "name": "RollbackHitbox",
   "tree": {
-    "$className": "ModuleScript",
-    "$path": "src/init.luau"
+    "$path": "src"
   }
 }
