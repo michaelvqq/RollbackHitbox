@@ -24,7 +24,7 @@ jobs:
           echo "$HOME/.rokit/bin" >> $GITHUB_PATH
 
       - name: Install tools
-        run: rokit install
+        run: rokit install --no-trust-check
 
       - name: Build
         run: rojo build default.project.json --output RollbackHitbox.rbxm
