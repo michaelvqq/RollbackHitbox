@@ -1,43 +1,6 @@
 --!strict
 -- RollbackHitbox / init.luau
---
--- Public facade for the RollbackHitbox system.
--- Require this module and use the functions below; you do not need to require
--- the sub-modules (HitboxComponent, PositionHistoryComponent, Validator) directly.
---
--- Minimal setup (server-side):
---
---   local RollbackHitbox = require(path.to.RollbackHitbox)
---   local RunService = game:GetService("RunService")
---
---   -- 1. Record snapshots every frame
---   RunService.Heartbeat:Connect(function()
---       RollbackHitbox.RecordAll(workspace:GetServerTimeNow())
---   end)
---
---   -- 2. Register characters when they spawn
---   player.CharacterAdded:Connect(function(character)
---       character:WaitForChild("HumanoidRootPart")
---       character:WaitForChild("Head")
---       RollbackHitbox.AttachHitboxes(character)
---       RollbackHitbox.RegisterCharacter(character)
---
---       character:WaitForChild("Humanoid").Died:Once(function()
---           RollbackHitbox.UnregisterCharacter(character)
---           RollbackHitbox.RemoveHitboxes(character)
---       end)
---   end)
---
---   -- 3. Validate hits in your PlayerHit RemoteEvent handler
---   local isValid, isHeadshot, hitDistance = RollbackHitbox.ValidateHit(
---       shooter, targetCharacter,
---       shotOrigin, shotDirection,
---       gunRange, muzzleOffset,
---       clientTimestamp
---   )
---   if isValid then
---       -- apply damage …
---   end
+-- Public API — see README for usage.
 
 local HitboxComponent = require(script.HitboxComponent)
 local PositionHistoryComponent = require(script.PositionHistoryComponent)
