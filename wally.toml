@@ -1,0 +1,11 @@
+[package]
+name = "michaelvqq/rollbackhitbox"
+description = "Server-authoritative rollback lag compensation for Roblox shooters."
+version = "0.1.0"
+license = "MIT"
+authors = ["Michael"]
+registry = "https://github.com/UpliftGames/wally-index"
+realm = "shared"
+repository = "https://github.com/michaelvqq/RollbackHitbox"
+
+[dependencies]

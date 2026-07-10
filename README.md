@@ -4,6 +4,15 @@ Server-authoritative rollback lag compensation for Roblox shooters. The server r
 
 ## Installation
 
+**Wally** — Add to your `wally.toml`:
+
+```toml
+[dependencies]
+RollbackHitbox = "michaelvqq/rollbackhitbox@0.1.0"
+```
+
+Then run `wally install`.
+
 **Roblox Studio** — Download `RollbackHitbox.rbxm` from the [latest release](https://github.com/michaelvqq/RollbackHitbox/releases/latest) and drag it into `ServerScriptService`.
 
 **Rojo** — Copy the `RollbackHitbox/` folder into your project and reference it in your `default.project.json`:
